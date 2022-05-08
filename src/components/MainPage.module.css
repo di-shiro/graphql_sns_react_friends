@@ -1,0 +1,29 @@
+.mainPage__root {
+  margin: 30px;
+}
+.mainPage__title {
+  font-size: 28px;
+  font-family: "Gill Sans", sans-serif;
+}
+.mainPage__out {
+  margin-left: 10px;
+  color: dimgray;
+  cursor: pointer;
+}
+.mainPage__input {
+  margin-right: 10px;
+}
+.mainPage__list {
+  height: 300px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.mainPage__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.mainPage__delete {
+  color: dimgray;
+  cursor: pointer;
+}
