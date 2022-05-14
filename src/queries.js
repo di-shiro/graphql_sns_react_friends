@@ -146,3 +146,36 @@ export const UPDATE_REQUESTS = gql`
     }
   }
 `;
+
+//* Direct Messages
+// # 引数のIDにログインUserのIDを指定すると、自分宛てに届いたDMのみをサーバーから取得する。
+export const GET_MESSAGES = gql`
+  query ($receiver: ID!) {
+    allMessages(receiver: $receiver) {
+      edges {
+        node {
+          id
+          message
+          sender {
+            id
+            username
+          }
+          receiver {
+            id
+            username
+          }
+        }
+      }
+    }
+  }
+`;
+// # DMの作成
+export const CREATE_MESSAGE = gql`
+  mutation ($message: String!, $receiver: ID!) {
+    createMessage(input: { message: $message, receiver: $receiver }) {
+      message {
+        message
+      }
+    }
+  }
+`;
